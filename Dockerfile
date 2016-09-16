@@ -10,7 +10,7 @@ RUN mkdir /opt \
   && mv UniFi unifi
 
 WORKDIR /opt/unifi
-VOLUME /opt/unifi/data
+VOLUME ["/opt/unifi/data", "/opt/unifi/logs"]
 
 EXPOSE 8080 8443 8880 8843
 ENTRYPOINT ["/usr/bin/java", "-Xmx1024M", "-jar", "/opt/unifi/lib/ace.jar"]
