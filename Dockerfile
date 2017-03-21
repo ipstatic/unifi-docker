@@ -1,13 +1,14 @@
-FROM alpine:3.4
+FROM alpine:3.5
 MAINTAINER Jarod Watkins <jwatkins@jarodw.com>
 
-RUN apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add openjdk7-jre mongodb curl unzip
+RUN apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add openjdk8-jre mongodb curl unzip
 
 RUN mkdir /opt \
-  && curl http://dl.ubnt.com/unifi/5.0.7/UniFi.unix.zip --output /opt/unifi.zip \
+  && curl http://dl.ubnt.com/unifi/5.4.11/UniFi.unix.zip --output /opt/unifi.zip \
   && cd /opt \
   && unzip unifi.zip \
-  && mv UniFi unifi
+  && mv UniFi unifi \
+  && rm /opt/unifi/lib/native/Linux/amd64/libubnt_webrtc_jni.so
 
 WORKDIR /opt/unifi
 VOLUME ["/opt/unifi/data", "/opt/unifi/logs"]
