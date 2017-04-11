@@ -4,7 +4,7 @@ MAINTAINER Jarod Watkins <jwatkins@jarodw.com>
 RUN apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add openjdk8-jre mongodb curl unzip
 
 RUN mkdir /opt \
-  && curl http://dl.ubnt.com/unifi/5.4.11/UniFi.unix.zip --output /opt/unifi.zip \
+  && curl http://dl.ubnt.com/unifi/5.4.14/UniFi.unix.zip --output /opt/unifi.zip \
   && cd /opt \
   && unzip unifi.zip \
   && mv UniFi unifi \
