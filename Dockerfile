@@ -1,7 +1,6 @@
 FROM alpine:edge
 MAINTAINER Jarod Watkins <jwatkins@jarodw.com>
 
-#RUN apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community add openjdk8-jre mongodb curl unzip libressl-dev
 RUN apk --no-cache add openjdk8-jre mongodb curl unzip
 
 RUN mkdir /opt \
