@@ -4,7 +4,7 @@ MAINTAINER Jarod Watkins <jwatkins@jarodw.com>
 RUN apk --no-cache add openjdk8-jre mongodb curl unzip
 
 RUN mkdir /opt \
-  && curl http://dl.ubnt.com/unifi/5.4.15/UniFi.unix.zip --output /opt/unifi.zip \
+  && curl http://dl.ubnt.com/unifi/5.4.19/UniFi.unix.zip --output /opt/unifi.zip \
   && cd /opt \
   && unzip unifi.zip \
   && mv UniFi unifi \
