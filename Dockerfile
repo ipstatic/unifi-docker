@@ -8,7 +8,7 @@ RUN mkdir /opt \
   && cd /opt \
   && unzip unifi.zip \
   && mv UniFi unifi \
-  && rm /opt/unifi/lib/native/Linux/amd64/libubnt_webrtc_jni.so
+  && rm /opt/unifi/lib/native/Linux/x86_64/libubnt_webrtc_jni.so
 
 WORKDIR /opt/unifi
 VOLUME ["/opt/unifi/data", "/opt/unifi/logs"]
