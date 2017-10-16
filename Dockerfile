@@ -1,6 +1,6 @@
 FROM alpine:edge
 MAINTAINER Jarod Watkins <jwatkins@jarodw.com>
-ENV VERSION 5.5.20
+ENV VERSION 5.5.24
 
 RUN apk --no-cache add openjdk8-jre mongodb curl unzip
 
